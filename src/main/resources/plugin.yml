@@ -1,0 +1,4 @@
+name: Rpg
+version: '${project.version}'
+main: org.super89.supermegamod.rpg.Rpg
+api-version: '1.20'
