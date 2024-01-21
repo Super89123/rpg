@@ -6,7 +6,6 @@ public final class Rpg extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("Hello world!!");
         // Plugin startup logic
 
     }
