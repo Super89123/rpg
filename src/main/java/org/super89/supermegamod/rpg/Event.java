@@ -1,7 +1,9 @@
 package org.super89.supermegamod.rpg;
 import com.destroystokyo.paper.Title;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,8 +12,18 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.io.File;
+import java.util.HashMap;
+
 
 public class Event implements Listener{
+    public Rpg plugin;
+    public Event(Rpg plugin){
+        this.plugin = plugin;
+
+    }
+
+
     public void ZoneSet(String name, Player player, double x1, double y1, double z1, double x2, double y2, double z2) {
         Location min = new Location(player.getWorld(), x1, y1, z1); // bottom-left corner of the region
         Location max = new Location(player.getWorld(), x2, y2, z2); // top-right corner of the region
