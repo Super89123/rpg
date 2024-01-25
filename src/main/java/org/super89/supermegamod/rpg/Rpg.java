@@ -17,6 +17,7 @@ public final class Rpg extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new Event(this), this);
+        getServer().getPluginCommand("lvl").setExecutor(new openGui(this));
 
         // Plugin startup logic
 
